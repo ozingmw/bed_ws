@@ -33,3 +33,8 @@ or
 
 python main.py
 ```
+
+- GUI 개선판 (버튼 누를 당시만 좌표계산)
+```
+./launch.opti.sh
+```
