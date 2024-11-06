@@ -1,0 +1,21 @@
+침대 사람 인식
+	- ros domain id 설정 후 해당 topic에서 sub할 때 에러 발생
+		- 역직렬화?
+		- 해당 에러 메모리 부족 or 다른 ros 버전으로 추정
+		- 하지만 해당 오류 문구 출력 후 정상적으로 subscriber로 데이터 받아옴
+		- 다른 테스트 코드 만들어서 더미 publish를 할 때도 마찬가지로 동일한 에러 발생
+		- camera raw data 말고 info 같은 다른 publish도 마찬가지
+		- 하지만 동일하게 subscriber 기능은 작동함
+		- qos_profile = QoSProfile(depth=10, reliability=ReliabilityPolicy.BEST_EFFORT) 의미 없음
+		
+		- 몇가지 테스트 후
+			- 데이터의 양은 상관없음
+			- subscriber 부분의 문제도 없음
+			- domain id 변경 후 같은 코드 동작 해도 문제 없음
+			- 임시로 간단하게 만든 데이터는 계속 데이터를 받지만 camera부분은 몇번 받고 터짐
+			
+		- 해결 방안 : domain id 변경
+		- 원인 : 모름.. 해당 domain에 다른 data들이 많이 전송되고 있어서인가?
+			다른 topic들도 많이 있는걸로 보면 그런걸수도..?
+		- 에러는 한두번 발생하지만 이후 발생안함 + 중단 안됨.
+		- 근본적인 해결책이 아니기 때문에 불안함

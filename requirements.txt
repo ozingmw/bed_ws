@@ -1,0 +1,6 @@
+openai
+requests
+opencv-python
+numpy==1.26.4
+pillow
+python-dotenv

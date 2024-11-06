@@ -1,0 +1,11 @@
+__pycache__/*
+bed/*
+Log/*
+temp/*
+
+res/*/*.png
+
+.env
+
+prompt_image_정면.png
+prompt_image_측면.png
