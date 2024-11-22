@@ -6,6 +6,8 @@ ROS2 & RGB-D 카메라를 이용한 현실 좌표 임계값 구분
 ### 실행 환경
 ROS2 humble, 22.04 ubuntu
 
+0\. RGB-D camera publisher 필요
+
 1\. prompt를 위한 루트 폴더에 정면, 측면 사진 필요
 ```
 |
